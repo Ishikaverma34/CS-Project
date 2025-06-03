@@ -1,0 +1,101 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align:center ;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f3f9f9, #e8f0ff);
+    min-height: 100vh;
+    padding: 30px;
+    color: #333;
+  }
+  
+  /* Page Title */
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+    color: #00695c;
+    letter-spacing: 1px;
+  }
+  
+  /* Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .filter-buttons button {
+    padding: 12px 25px;
+    border: 2px solid #00acc1;
+    background-color: #ffffff;
+    color: #00acc1;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 172, 193, 0.1);
+  }
+  
+  .filter-buttons button:hover,
+  .filter-buttons button.active {
+    background-color: #00acc1;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 172, 193, 0.3);
+  }
+  
+  /* Gallery Grid Layout */
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 0 10px;
+  }
+  
+  /* Individual Image Card */
+  .gallery-item {
+    display: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .gallery-item.show {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+}  
