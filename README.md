@@ -1,1 +1,1 @@
-# CS-Project
+# Image gallery with filteration
